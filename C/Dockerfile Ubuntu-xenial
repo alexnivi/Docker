@@ -3,6 +3,8 @@ FROM ubuntu:xenial
 RUN apt-get update
 RUN apt-get -y upgrade
 RUN apt-get -y install build-essential
+RUN apt-get install zsh
+RUN apt-get install git-core
 RUN apt-get -y install nano
 RUN mkdir /volumen
 

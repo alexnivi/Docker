@@ -12,3 +12,4 @@ Donde la bandera -t denota el nombre que se le asignará a la imagen.
 Por default al crear una imagen personalizada, también se creará y montará en la máquina la imagen base de nuestro dockerfile.
 
 En esta imagen se incluye la instalación del editor de texto nano así como el montaje de un volumen
+Para facilitar un poco la navegación en la terminalinteractiva, también se instala oh my zsh!!!
