@@ -1,0 +1,7 @@
+#!/bin/bash
+
+##Descarga La imagen de Pig para Docker
+
+docker pull hakanserce/apache-pig
+docker run -i -t hakanserce/apache-pig /etc/bootstrap.sh -bash
+Pig
