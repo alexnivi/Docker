@@ -1,0 +1,15 @@
+#!/bin/bash
+region=us-west-2
+name_instance=ompi-node
+pushd /tmp
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# Adding docker repository.
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+apt-get update
+apt-cache policy docker-ce
+apt-get install -y docker-ce nano
+service docker start
+service ssh start
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+PUBLIC_IP=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)
+aws ec2 create-tags --resources $INSTANCE_ID --tag Key=Name,Value=$name_instance-$PUBLIC_IP --region=$region
