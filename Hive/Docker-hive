@@ -1,0 +1,3 @@
+
+ docker run -i -t nagasuga/docker-hive /bin/bash
+ 
