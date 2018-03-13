@@ -26,3 +26,10 @@ cd /usr/local/hive
 ./bin/hive
 ```
 
+
+Para montar la imagen con un Volume:
+```
+docker run -it -v ~/Desktop/Prueba:/Volume nagasuga/docker-hive 
+```
+
+Desde host:Prueba a Docker:Volume
