@@ -1,0 +1,3 @@
+#Imagen Spark 2.2
+
+docker run -it p7hb/docker-spark
