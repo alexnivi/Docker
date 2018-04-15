@@ -16,3 +16,10 @@ Para correr spark solo ejecutar:
 ```
 pyspark
 ```
+
+## Imagen de Spark can Jupyter notebook
+
+```
+docker run -it -p 8888:8888 jupyter/pyspark-notebook
+```
+
