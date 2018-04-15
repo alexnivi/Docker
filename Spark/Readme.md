@@ -22,4 +22,9 @@ pyspark
 ```
 docker run -it -p 8888:8888 jupyter/pyspark-notebook
 ```
+Se debe crear un Spark Context en cada notebook nuevo:
 
+```
+import pyspark
+sc = pyspark.SparkContext('local[*]')
+```
